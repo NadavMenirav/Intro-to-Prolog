@@ -31,7 +31,7 @@ val(fail).
 table(A, B, Expression) :-
     val(A),
     val(B),
-    write(A), write(' '), write(B), write(' '),
+    write(A), write('  '), write(B), write('  '),
     (Expression->write(true); write(fail)),
     nl,
     fail.

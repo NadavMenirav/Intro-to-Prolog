@@ -3,7 +3,7 @@
 
 % This function receives a number and returns a list of two prime numbers which sum to that number
 goldbach(N, X) :-
-    find_primes(N, 2, X).
+    find_primes(N, 2, X), !.
 
 find_primes(N, A, []) :-
     A >= N.
