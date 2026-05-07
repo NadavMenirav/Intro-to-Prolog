@@ -22,3 +22,18 @@ nor(X, Y) :- not(or(X, Y)).
 
 % This predicate receives two boolean values and returns their "XNOR"
 equal(X, Y) :- not(xor(X, Y)).
+
+
+% This predicate receives a boolean expression and prints its truth table
+val(true).
+val(fail).
+
+table(A, B, Expression) :-
+    val(A),
+    val(B),
+    write(A), write(' '), write(B), write(' '),
+    (Expression->write(true); write(fail)),
+    nl,
+    fail.
+
+table(_, _, _).
